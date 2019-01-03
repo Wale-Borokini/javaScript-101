@@ -1,0 +1,1042 @@
+
+
+
+
+JAVASCRIPT FOR ABSOLUTE BEGINNERS.
+What is JavaScript?
+It is a programming language that is used to make web pages interactive.
+
+It is known as an interpreted language. It Doesn't have to be compiled like other programming languages. And it makes things much easier.
+Runs on the client's computer/browser. Languages like PHP, RUBY run on a server somewhere else. but Javascript runs on our computer.
+It is object Based. It is an object oriented programmer. It is prototype based instead of class based.
+
+
+
+JavaScript is NOT java.
+They have a similar name but are completely different.
+Java is much more complex.
+Java is a high level language that is in the same category as C and C++.
+JavaScript is a "scripting" language. which means that it is a light weight language that is interpreted by a web browser when the page is loaded.
+
+
+JAVASCRIPT PROGRAMMING FUNDAMENTALS.
+
+Variables 		Comparisons & Operators		Data Types
+Arrays 			Objects 					Prototypes
+Loops 			functions 					Events 
+Conditionals 	Program Flow
+
+
+
+Html vs JavaScript
+They are completely different and they work together.
+HTML is a markup language and javaScript is a programming language.
+JacaScript uses "events" and "actions" to make your page interactive.
+
+
+
+WHAT CAN I DO WITH JAVASCRIPT?
+Put content in an HTML on the fly.
+make webpages Responsive.
+Detect a Users Browser & other Info.
+Create Cookies.
+Validate Forms.
+Create Animations, Slideshows, Scrollers, etc.
+Build Apps With Javascript frameworks (AngularJs, ReactJs, BackboneJs, etc). 
+
+
+(WE WILL BE USING  index.html  here. And it has a css file linked to it) 
+
+We will be using the "script" tag in our HTML. For the sake of simplicity.
+
+
+
+VARIABLES AND DATA TYPES.
+We will be using   (console.html)
+We will also be inputing codes inside our "script tag"
+
+
+E.g:
+
+	 alert('Script Tags Work');
+
+
+	The different data types under JavaScript are as follows:
+
+	// Number
+	// string
+	// Array
+	// Object
+
+
+E.g:
+
+
+	var number1 = 35;
+	var number2 = 40;
+
+
+	alert(number1+number2); 
+
+
+The below variables are writen as strings. So it won't add them together. But rather, It will join them together like words.
+
+
+	var number1 = '35';
+	var number2 = '40';
+
+	alert(number1+number2);
+
+
+
+E.g:(the below variables are strings as well)
+
+
+	var number1 = '35';
+	var number2 = '40';
+
+	alert('My favorite number is '+number1); 
+
+
+
+Variable "1" is a number, while Variable "2" is a string.
+If we add the two variables, both variables will be added side by side like it's being joined together.
+
+
+	var number1 = 35;
+	var number2 = '40';
+
+	alert('My favorite number is '+number1);
+
+
+
+	Variables (var) can contain letters, numbers, underscore, dollar signs.
+	Variables should begin with a letter _ and $
+	They are case sensitive (unlike html tags which are not) e.g below:
+
+
+	var test = 'This is a test';
+	var Test = 'This is another good test';
+
+	alert(Test); 
+
+
+If we alert "Test", We will get "this is another good test"
+& If we alert "test", We will get "This is a test".
+
+
+
+ (We have different styles of variables below)
+
+
+	Camel case
+	var myFavouriteNumber;
+	myFavouriteNumber = 5; (same as above)
+
+
+
+	partial case(Partial case is very close to camel case, except that the first word is in uppercase)
+	var MyFavouriteNumber; 
+
+	underscore
+	var my_favourite_number;  */
+
+
+/////////////////////////////////////////////////////////////
+
+				ARRAYS
+
+
+	Arrays are used to store multiple values in a single variable. eg. var colors = ['red', 'blue', 'green']; 
+	
+	How to create an Array:
+
+			//STRINGS
+
+
+	var colors = ['red', 'blue', 'green'];
+
+	alert(colors[2]);
+
+
+	we will get green when we load in our browser.
+
+					OR:
+
+
+
+	 var colors = new Array('red', 'yellow', 'orange');
+
+	 alert(colors[2]);
+
+
+
+	 //The first method is my most preferred
+
+
+
+	To target the second value, which is blue, we say:
+	var colors = ['red', 'blue', 'green'];
+
+	alert(colors[1]); 
+
+	Arrays are in a sequence of 0,1,2,3,4,5 instead of the regular 1,2,3,4,5
+
+
+How to add to an Array (I added green)
+
+
+
+	var colors = new Array('red', 'yellow', 'orange');
+
+	colors[3] = 'green';
+
+	 alert(colors); 
+		
+
+
+ var colors = new Array('red', 'yellow', 'orange');
+
+	colors.push('purple');
+
+	 alert(colors[3]);
+
+
+	 ".push" is known as the dot syntax
+	The  first method is my most preferred   	
+
+
+
+			//NUMBERS
+			(putting Numbers in an Array)
+
+
+
+	var numbers = [5,77,6,43];
+
+	alert(numbers[0] + numbers[2]);  		
+
+
+	var numbers = [5,77,6,'Seven'];
+
+	alert(numbers[3]);	
+
+
+
+	In the browser, we will get an alert for "5+6", which is "11" And then an alert for "Seven". (the alert is based on the position of the numbers(0, 1, 2,3,....))
+
+
+
+			//Length	
+	The length pertains to how many numbers or strings are in there[] e.g below:	
+
+
+	var numbers = [5,77,6,'Seven'];
+
+	alert(numbers.length); 	
+
+
+
+
+	var numbers = [5,77,6,'Seven',1,55];
+
+	alert(numbers.length);		
+
+
+
+	//SORT
+
+	Method or Function has to have a parentheses at the back of it like This 		());
+
+
+
+	var numbers = [5,77,6,'Seven',1,55];
+
+	alert(numbers.sort());
+
+
+
+	  .sort will sort them by value e.g 1,5,6,55..		
+
+
+
+	var numbers = [5,77,6,'Seven',1,55];
+
+	alert(numbers.reverse());
+
+
+
+	// Reverse will give us the reverse order from which it was written or created e.g 55,1,'Seven',6...		
+
+
+
+
+			//LOOPS
+
+	//Loops iterate through something whether an array or results from a database.
+
+	//TYPES: for loop, while loop, for each loop eg below: 
+	(Read more about these three loops on "w3schools.com")
+
+
+	for(var i = 0; i < 10; i++){
+		console.log(i);	
+
+	}	
+
+
+
+	We will get a loop that starts at "0" & ends at "9" in the browser
+
+
+
+	//for loops takes three different parameters (the parameters are seperated by semi-columns:
+	// 1. a variable (var i = 0; )
+	// 2. is the condition ( i < 10; )
+	// 3. is the increament ( i++ ) 
+
+	for(var i = 0; i < 10; i++){
+		console.log(i);	 
+	}
+
+
+	for(var i = 0; i <= 10; i++){
+		console.log(i);	
+
+	}
+
+
+E.g:
+
+
+	for(var i = 0; i <= 20; i++){
+		console.log(i);	
+	}		
+
+
+
+E.g
+
+
+
+	for(var i = 0; i <= 20; i++){
+		console.log('I love the number '+i);
+	} 		
+
+
+
+	// WHILE LOOPS
+
+
+	var i = 0;
+	while(i < 10){
+		console.log(i);
+		i++;
+	} 
+
+
+
+	//FOR EACH LOOP 
+	// For each loops are built to work with arrays e.g:
+
+
+
+	var numbers = [33,54,76,34,2,6];
+
+	numbers.forEach(function(number){
+		console.log(number);
+	});				
+
+
+When we load the above code in the browser, We will get The same list of numbers in the Array the same way they are being written in the scripts.
+
+
+	//We can also use for loops or while loops with arrays:
+
+
+
+	var numbers = [33,54,76,34,2,6];
+	
+	for(var i = 0;i < numbers.length;i++){
+		console.log(numbers[i]);
+	}			
+
+
+
+	//If we want it in reverse:
+
+
+	var numbers = [33,54,76,34,2,6];
+	numbers.reverse();
+	
+	for(var i = 0;i < numbers.length;i++){
+		console.log(numbers[i]);
+	}			
+
+
+
+//////////////////////////////////////////////////////////
+
+
+	//CONDITIONALS
+	//conditions 	
+
+	// = means assigning e.g asigning 1 = 1
+
+	// == means comparing
+
+	// === is the same thing as double equal signs except that 
+
+	the two data types has to match e.g: 
+
+
+			if(1 === 1) right (they are the same data types)
+			if(1 === '1') wrong(they are different data types. one is a number and one is a string)	eg below
+
+
+	if(1 == 1){
+		console.log('this is true');
+	}
+
+
+
+	It will display 'This is true' in the console log.
+
+	but if we change it to 2:
+
+
+
+	if(1 == 2){
+		console.log('This is true');
+	}
+
+
+	It displays nothing.
+
+
+
+	var var1 = 3;
+	var var2 = 4;
+	if(var1 == var2){
+		console.log('This is true');
+	}
+	
+
+
+	In the browser, the above code will display nothing, because "3" is not equal to "4"
+
+
+	To test if it was not equal, we use an exclamation mark != eg			
+
+
+	var var1 = 3;
+	var var2 = 4;
+	if(var1 != var2){
+		console.log('This is true');
+	}
+
+
+
+	It wil display "this is true" because of course, var1 is not equal to var2 
+
+
+
+/////	If it is not true, but you want something to happen if it is not true then you use  'else'
+
+
+	var var1 = 3;
+	var var2 = 4;
+	if(var1 == var2){
+		console.log('This is true');
+	} else {
+		console.log('this is false');
+	}				
+
+
+IN THE BROWSER, we will get false because "var1" is not equal to "var2"
+
+
+	we can add coditions by using && eg. below
+
+
+	var var1 = 3;
+	var var2 = 3;
+	if(var1 == var2 && var1 == 3){
+		console.log('This is true');
+	} else {
+		console.log('this is false');
+	}
+
+
+
+	we get 'This is true' because var1 ==(is equal to) var3	
+
+
+	If I put "4" in "var2", I get 'this is false' because even though var1 is still equal to 3,  var1 is not equal to var2 anymore.
+	If we put in "||" (which means 'or'), we get 'this is true' because var1 is still equal to 3
+
+
+	var var1 = 3;
+	var var2 = 4;
+	if(var1 == var2 && var1 == 3){
+		console.log('This is true');
+	} else {
+		console.log('this is false');
+	}	
+
+
+FOR the above, we get "this is false"
+
+
+	var var1 = 3;
+	var var2 = 4;
+	if(var1 == var2 || var1 == 3){
+		console.log('This is true');
+	} else {
+		console.log('this is false');
+	}		
+
+
+We have added ("or" "||"), So we will get "this is true" in our browser
+
+
+	//SWITCH STATEMENTS 
+
+
+	var fruit = 'grapes';
+
+	switch(fruit){
+		case "banana":
+			alert('I hate bananas');
+			break;
+		case "apple":
+			alert('I love apples');
+			break;
+		case "orange":
+			alert('oranges are ok')
+		default:
+			alert('I love all other fruits');
+			break;
+	} 
+
+
+
+If we put in banana, apple and orange in here:
+
+var fruit = 'grapes';
+
+We will get the message assigned to each of them. But if we put any other fruits asides the above 3 listed fruits, We will get "I love all other fruits".
+
+
+
+	//OBJECTS
+
+	//Objects are similar to arrays
+	
+	//There are a few different ways to work with objects. they are as follows:
+
+	//Object Literal
+
+
+
+	var person = {
+		firstName: 'Brad',
+		lastName: 'traversy',
+		age: 34
+	}
+
+	console.log(person.lastName);
+
+
+
+	.(dot) must be in between the person & objects  	
+
+	We can add arrays too eg. 		
+
+
+
+	var person = {
+		firstName: 'Brad',
+		lastName: 'traversy',
+		age: 34,
+		children: ['Olu', 'Tope', 'Segun']
+	}
+
+	console.log(person.children[1]);
+
+
+
+
+	We can loop through this as well. for loops, while loop.				
+
+	var person = {
+		firstName: 'Brad',
+		lastName: 'traversy',
+		age: 34,
+		children: ['Olu', 'Tope', 'Segun'],
+		address: {
+			street: '555 something st',
+			city: 'Boston',
+			state: 'MA'
+		}
+	}
+
+	console.log(person.address.state);
+
+
+
+	console.log(person.address.);  for full address & then console.log(person.address.state); for just the state.		
+
+
+
+	WE CAN also add functions eg   
+
+
+	var person = {
+		firstName: 'Brad',
+		lastName: 'traversy',
+		age: 34,
+		children: ['Olu', 'Tope', 'Segun'],
+		address: {
+			street: '555 something st',
+			city: 'Boston',
+			state: 'MA'
+		},
+		fullName: function(){
+			return this.firstName +" "+this.lastName
+		}
+	}
+
+	console.log(person.fullName());
+
+
+
+	THE ABOVE code will get fullName		
+
+
+
+
+	//OBJECT CONSTRUCTOR	
+
+
+	var apple = new Object();
+	apple.color = 'red';
+	apple.shape = 'round';
+
+	apple.describe = function(){
+		return 'An apple is the color '+this.color+' and is the shape '+this.shape;
+	}
+
+	console.log(apple.describe());
+
+
+
+
+	//A much simplier way to do this:
+
+	//Constructor pattern 			
+
+
+
+	function Fruit(name, color, shape){
+		this.name = name;
+		this.color = color;
+		this.shape = shape;
+	}
+
+	var apple = new Fruit('apple', 'red', 'round');
+	var melon = new Fruit('melon', 'green', 'round');
+	var banana = new Fruit('banana', 'lightGreen', 'long');
+
+	console.log(melon.color)
+
+
+
+	//we say (melon) for the full details of the melon.
+	//we say (melon.color) for the melon color alone.
+
+
+
+
+	function Fruit(name, color, shape){
+		this.name = name;
+		this.color = color;
+		this.shape = shape;
+
+		this.describe = function(){
+			return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape
+		}
+	}
+
+	//var apple = new Fruit('apple', 'red', 'round'); (the more fruits we want to add is just this one line of code)
+	var melon = new Fruit('melon', 'green', 'round');
+
+	console.log(melon.describe())			
+
+
+
+	//We can also have arrays of Objects 		
+
+
+
+	var users = [
+		{
+			name: 'John Doe',
+			age: 27
+		},
+		{
+			name: 'Wale Borokini',
+			age: 45
+		},
+		{	
+			name: 'Dapo Johnson',
+			age: 25		
+		}
+	];
+
+	console.log(users[1].age);
+
+
+
+
+	//Put in name or age to get the users database			
+
+//////////////////////////////////////////////////////////
+
+
+
+		//EVENTS
+		we will be using   (index.html)
+		
+		//Events is one of the important aspect of learning JavaScript. because javascript was created to make web pages interactive and dynamic and in order to do that, you need to have some of events handling for clicks, scrolls, drags, etc
+		
+
+		//doClick
+		
+		*/
+
+
+<!-- Onclick -->
+
+We put  the below in our  index.html   And then load
+
+////////////////////////////////////
+<body>
+
+	 <div class="container">
+	 <button onclick="doClick()">Click Me</button> -->
+	</div>
+
+</body>
+
+	<script>
+
+	 function doClick(){
+			alert('You Clicked!');
+		}
+
+	</script>
+
+///////////////////////////////////////////
+
+We can also use this instead of the above, but we won't get an alert. But there is a much better way of doing it (change text method):
+
+	<button onClick="this.innerHTML ='You Clicked!'">Click Me</button> -->
+
+/////////////////////////////////////////
+
+	(You Clicked)
+CHANGE TEXT METHOD.
+<body>
+
+	<div class="container">
+	<button onclick="changeText(this)">Click Me</button>
+	</div>
+
+</body>
+
+<script>
+
+	function changeText(id){
+		id.innerHTML = 'You Clicked!';
+	}
+
+</script>
+
+
+It does the same thing, but this looks a lot neater.
+////////////////////////////////////////////
+
+
+WE CAN ALSO CHANGE THE HEADING.
+ We will ad an "id" to the heading & we will use a DOM function called "getElementById"
+
+<body>
+
+
+<div class="header">
+	<h1 id="heading">Learning JavaScript</h1>
+	<p>With Wale Borokini</p>
+</div>
+
+<div class="container">
+<button onclick="changeText()">Click Me</button>
+</div>
+
+
+</body>
+
+<script>
+
+function changeText(){
+	var heading = document.getElementById('heading');
+	heading.innerHTML = 'You Clicked!';
+}
+
+</script>
+
+
+//////////////////////////////////////////////////////
+
+
+
+		SHOW DATE FUNCTION
+
+
+<div class="header">
+	<h1 id="heading">Learning JavaScript</h1>
+	<p>With Wale Borokini</p>
+</div>
+		
+	<div class="container">
+	<h1 id="time"></h1>
+	<button onclick="showDate()">Show Date</button>
+</div>
+
+
+
+<script>
+
+	function showDate(){
+		var time = document.getElementById('time');
+		time.innerHTML = Date();
+	}
+
+</script>
+
+
+onclick is not the only event we can use. Another one is "onmouseover".
+
+
+
+ONMOUSEOVER
+
+
+<div class="container">
+	<h1 id="time"></h1>
+
+
+	<button onmouseover="showDate()">Show Date</button>
+<!-- copy and replace the above on the previous code -->
+</div>
+
+<script>
+
+	function showDate(){
+		var time = document.getElementById('time');
+		time.innerHTML = Date();
+	}
+
+</script>
+
+(You don't have to "click" it, You just "hover" over it)
+
+///////////////////////////////////////////////
+
+ONMOUSEOUT
+
+
+<div class="container">
+	<button onmouseout="clearDate()" onmouseover="showDate()">Show Date</button>
+
+	<h1 id="time"></h1>
+</div>
+
+
+
+<script>
+
+	function showDate(){
+		var time = document.getElementById('time');
+		time.innerHTML = Date();
+	}	
+
+	function clearDate(){
+		var time = document.getElementById('time');
+		time.innerHTML = '';
+	}	
+
+</script>
+
+///////////////////////////////
+
+
+
+ONLOAD
+We attach "onload" to the body.
+
+
+<body onload="showDate()">
+<div class="header">
+	<h1 id="heading">Learning JavaScript</h1>
+	<p>With Wale Borokini</p>
+</div>
+		
+	<div class="container">
+	<button onmouseout="clearDate()" onmouseover="showDate()">Show Date</button>
+
+	<h1 id="time"></h1>
+</div>
+
+
+
+<script>
+
+	function showDate(){
+		var time = document.getElementById('time');
+		time.innerHTML = Date();
+	}	
+
+	function clearDate(){
+		var time = document.getElementById('time');
+		time.innerHTML = '';
+	}	
+
+</script>
+
+
+The date will show when we reload.
+
+///////////////////////////////////////////////////// 
+		
+
+		FORMS
+next to change the background color, give the body an id of body then do the coding*/
+
+We put this code below the first "div" in the HTML
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Learning JavaScript</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body id="body">
+<div class="header">
+	<h1 id="heading">Learning JavaScript</h1>
+	<p>With Wale Borokini</p>
+</div>
+		
+	<div class="container">
+	<form method="post" action="something.php" name="myForm">
+		<div>
+			<label>First Name</label>
+			<input type="text" name="firstName" id="firstName" />
+		</div>
+		<br />
+		<div>
+			<label>Last Name</label>
+			<input type="text" name="lastName" id="lastName" />
+		</div>
+		<br/>
+		<div>
+			<label>Background</label>
+			<select name="background" id="background" onchange="changeBackground(this)">
+				<option value="red">Red</option>
+				<option value="blue">Blue</option>
+				<option value="green">Green</option>
+			</select>
+		</div>
+		<br />
+		<input type="submit" value="Submit" />
+	</form>
+</div>
+
+<script>
+
+function changeBackground(x){
+	console.log(x.value);
+	var body = document.getElementById('body');
+	document.body.style.backgroundColor = x.value;
+}
+
+</script>
+
+</body>
+</html>
+
+
+WE CAN ALSO change the background image
+
+/////////////////////////////////////
+
+
+To change the color of heading do This only:
+
+<script>
+
+function changeBackground(x){
+	console.log(x.value);
+	var heading = document.getElementById('heading');
+	heading.style.color = x.value;
+}
+
+</script>
+	
+
+
+///////////////////////////////////////////////
+	FORM VALIDATION 
+
+
+	When working on a form, it is a good ideas to use onsubmit.
+
+
+We put the below code just right after the 1st "div" in the HTML
+
+
+	<div class="container">
+	<form method="post" action="something.php" name="myForm" onsubmit="return validateForm()">
+		<div>
+			<label>First Name</label>
+			<input type="text" name="firstName" id="firstName" />
+		</div>
+		<br />
+		<div>
+			<label>Last Name</label>
+			<input type="text" name="lastName" id="lastName" />
+		</div>
+		<br />
+		<input type="submit" value="Submit" />
+	</form>
+</div>
+
+<script>
+	
+function validateForm(){
+	var firstName = document.forms["myForm"]["firstName"].value;
+
+	if(firstName == null || firstName == ""){
+		alert("First name is required");
+		return false;
+	}
+
+if(firstName.length < 3){
+		alert("First name must be at least 3 chars");
+		return false;
+	}
+} 
+
+</script>
+
+
